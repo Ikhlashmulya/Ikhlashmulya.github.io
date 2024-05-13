@@ -25,7 +25,7 @@ export default function About() {
     <div className="min-h-screen flex flex-col md:w-[60%] mx-auto mb-10">
       <div>
         <h1 className="text-4xl font-bold mb-5 mt-10">About Me</h1>
-        <p className="text-lg">Hi, I am Ikhlash Mulyanurahman a passionate and dedicated software developer specializing in backend development. With a keen interest in creating efficient and scalable solutions, I take pride in ensuring high-performance and reliable applications.</p>
+        <p className="text-lg">Hi, I am Ikhlash Mulyanurahman a passionate and dedicated web developer specializing in backend development. With a keen interest in creating efficient and scalable solutions, I take pride in ensuring high-performance and reliable applications.</p>
         <p className="text-lg">I am always eager to stay updated with the latest trends and technologies. I believe in continuous learning and improvement to deliver cutting-edge solutions. On good days, I love to explore about technology especially on programming.</p>
       </div>
       <div>

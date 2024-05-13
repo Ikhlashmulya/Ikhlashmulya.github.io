@@ -13,7 +13,7 @@ export default function Home() {
         <img src="/images/me.jpeg" alt="me.jpeg" className="w-60 rounded-full border-2 border-gray-800" />
         <div>
           <h1 className="text-4xl font-bold">Hi There!👋</h1>
-          <p className="py-6 text-lg"> My name is <b>Ikhlash Mulyanurahman</b>. A Software Developer from West Java, Indonesia.</p>
+          <p className="py-6 text-lg"> My name is <b>Ikhlash Mulyanurahman</b>. A Web Developer from West Java, Indonesia.</p>
           <SocialLink />
           <a href="mailto:nurahmanmulya@gmail.com" className="btn mt-5">Contact Me</a>
         </div>
