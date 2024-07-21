@@ -6,7 +6,7 @@ date: 08-02-2020
 
 This is my first post to demonstrate that it works.
 
-![gambar](/public/images/cover.jpeg)
+![gambar](/images/cover.jpeg)
 
 **And it has a bit of a longer content in order to test the scrolling to the different header sections.**
 
