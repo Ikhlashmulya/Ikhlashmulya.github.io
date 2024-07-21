@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layout/baseLayout.astro";
+import type { Frontmatter } from "../../types/frontmatter";
+const posts = await Astro.glob<Frontmatter>("../../content/posts/**/*.md");
+posts.sort((a, b) =>
+  Date.parse(a.frontmatter.date) < Date.parse(b.frontmatter.date) ? 1 : -1
+);
+---
+
+<BaseLayout title="blog">
+  <h1 class="mt-5 text-2xl font-bold">Blog Archive</h1>
+  <ul class="mt-2">
+    {
+      posts.map((post) => (
+        <a href={"/blog/" + post.frontmatter.slug} class="mb-1 hover:opacity-80">
+          <li class="flex justify-between">
+            <section>{post.frontmatter.title}</section>
+            <section>{new Date(post.frontmatter.date).toLocaleDateString("id", {day: "2-digit", month: "short", year: "numeric"})}</section>
+          </li>
+        </a>
+      ))
+    }
+  </ul>
+</BaseLayout>

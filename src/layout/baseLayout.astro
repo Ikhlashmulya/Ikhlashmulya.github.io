@@ -1,0 +1,30 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Navbar from "../component/navbar.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+
+    <style>
+      body {
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-300 dark:bg-stone-800">
+    <Navbar />
+    <div class="w-full lg:w-7/12 mx-auto dark:text-gray-300 px-5 lg:px-0">
+      <slot />
+    </div>
+	<br>
+  </body>
+</html>
