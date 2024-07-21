@@ -5,8 +5,8 @@ import ThemeIcon from "./themeIcon.astro";
 <nav class="w-full lg:w-7/12 mx-auto flex justify-between py-5 px-5 lg:px-0">
   <h1 class="text-2xl font-bold dark:text-gray-300">Ikhlashmulya</h1>
   <div id="link" class="flex gap-3 me-3 mt-1 dark:text-gray-300">
-    <a href="/" class={Astro.url.pathname == '/' ? 'font-bold': 'hover:opacity-80'}>home</a>
-    <a href="/blog" class={Astro.url.pathname == '/blog' ? 'font-bold': 'hover:opacity-80'}>blog</a>
+    <a href="/" class={Astro.url.pathname.replace(/\//g, '') == '' ? 'font-bold': 'hover:opacity-70'}>home</a>
+    <a href="/blog" class={Astro.url.pathname.replace(/\//g, '') == 'blog' ? 'font-bold': 'hover:opacity-70'}>blog</a>
     <ThemeIcon />
   </div>
 </nav>

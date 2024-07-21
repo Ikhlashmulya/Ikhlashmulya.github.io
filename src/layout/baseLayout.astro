@@ -15,7 +15,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
-    <LoadingIndicator color="#7e22ce" />
+    <LoadingIndicator color="#7e22ce" height="5px" threshold={false} />
     <style>
       body {
         overflow-y: scroll;
