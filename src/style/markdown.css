@@ -36,7 +36,7 @@
 }
 
 .markdown :not(pre) > code {
-  @apply bg-[#b76ff7] text-gray-900 dark:bg-[#7e22ce] dark:text-gray-100;
+  @apply bg-purple-400 text-gray-900 dark:bg-purple-600 dark:text-gray-100;
   border-radius: 10px;
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
