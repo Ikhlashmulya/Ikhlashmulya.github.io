@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../../layout/baseLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
 import type { Frontmatter } from "../../types/frontmatter";
-const posts = await Astro.glob<Frontmatter>("../../content/posts/**/*.md");
+const posts = await Astro.glob<Frontmatter>("../../contents/blog/**/*.md");
 posts.sort((a, b) =>
   Date.parse(a.frontmatter.date) < Date.parse(b.frontmatter.date) ? 1 : -1
 );

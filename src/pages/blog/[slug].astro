@@ -1,12 +1,12 @@
 ---
 import type { GetStaticPaths, MDXInstance } from "astro";
 import type { Frontmatter } from "../../types/frontmatter";
-import "../../style/markdown.css";
-import BaseLayout from "../../layout/baseLayout.astro";
+import "../../styles/markdown.css";
+import BaseLayout from "../../layouts/baseLayout.astro";
 
 export const getStaticPaths = (async () => {
   const posts = (await Astro.glob<Frontmatter>(
-    "../../content/posts/**/*.md"
+    "../../contents/blog/**/*.md"
   )) as MDXInstance<Frontmatter>[];
 
   return posts.map((post) => ({
