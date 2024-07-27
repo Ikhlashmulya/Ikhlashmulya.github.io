@@ -1,10 +1,24 @@
 ---
+import { getEntry } from "astro:content";
 import BaseLayout from "../layouts/baseLayout.astro";
+const logoTechStack = await getEntry("skill", "logo");
 ---
 
 <BaseLayout title="home">
   <main class="mt-10 text-justify">
-    <p class="mb-5">
+    <img
+      src="/images/me.jpeg"
+      alt="Photo"
+      width={200}
+      height={200}
+      class="rounded-full mx-auto my-10"
+    />
+    <h1
+      class="text-2xl font-semibold border-b-4 border-purple-600 inline-block"
+    >
+      About Me
+    </h1>
+    <p class="my-5">
       Hi! I am <strong>Ikhlash Mulyanurahman</strong> a passionate and dedicated
       web developer specializing in backend development. With a keen interest in
       creating efficient and scalable solutions, I take pride in ensuring high-performance
@@ -16,5 +30,17 @@ import BaseLayout from "../layouts/baseLayout.astro";
       solutions. On good days, I love to explore about technology especially on
       programming.
     </p>
+    <h1
+      class="text-2xl font-semibold border-b-4 border-purple-600 inline-block my-5"
+    >
+      Skills
+    </h1>
+    <div class="flex flex-wrap gap-5 justify-center">
+      {
+        logoTechStack.data.map((v: { src?: string; alt?: string; }) => (
+          <img width="46" height="46" src={v.src} alt={v.alt} />
+        ))
+      }
+    </div>
   </main>
 </BaseLayout>

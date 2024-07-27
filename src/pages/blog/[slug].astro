@@ -6,7 +6,7 @@ import BaseLayout from "../../layouts/baseLayout.astro";
 
 export const getStaticPaths = (async () => {
   const posts = (await Astro.glob<Frontmatter>(
-    "../../contents/blog/**/*.md"
+    "../../content/blog/**/*.md"
   )) as MDXInstance<Frontmatter>[];
 
   return posts.map((post) => ({
@@ -46,7 +46,7 @@ const { Content, frontmatter } = Astro.props.post;
 </BaseLayout>
 <script is:inline>
   // Get the 'to top' button element by ID
-  var toTopButton = document.getElementById("to-top-button");
+  const toTopButton = document.getElementById("to-top-button");
 
   // Check if the button exists
   if (toTopButton) {
