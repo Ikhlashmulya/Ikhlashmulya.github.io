@@ -134,7 +134,29 @@ untuk menambahkan dhcp secara otomatis bisa menggunakan command
 /ip dhcp-server setup
 ```
 
-jika ingin setup secara manual
+chat saat konfigurasi
+```
+Select interface to run DHCP server on 
+
+dhcp server interface: bridge1 -- ketik nama bridge/interface
+Select network for DHCP addresses 
+
+dhcp address space: 192.168.1.0/24 -- sesuai IP di brigde/interface
+Select gateway for given network 
+
+gateway for dhcp network: 192.168.1.1 -- sesuai IP gateway di brigde/interface
+Select pool of ip addresses given out by DHCP server 
+
+addresses to give out: 192.168.1.2-192.168.1.254 -- range IP
+Select DNS servers 
+
+dns servers: 192.168.122.1 -- bisa 8.8.8.8 atau jika pake NAT bisa dengan IP yang didapat dari NAT
+Select lease time 
+
+lease time: 10m
+```
+
+atau jika ingin setup secara manual
 ```
 /ip pool add name=pool8 ranges=YYY.YYY.YYY.100-YYY.YYY.YYY.120
 /ip dhcp-server network add address=YYY.YYY.YYY.0/24 gateway=YYY.YYY.YYY.1
