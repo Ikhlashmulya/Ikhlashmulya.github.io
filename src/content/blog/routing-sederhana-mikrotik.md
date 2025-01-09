@@ -97,7 +97,17 @@ add bridge=bridge1 interface=ether4
 /ip address edit 0 interface
 ```
 
-ubah ether2 ke bridge1 kemudian ctrl+o
+0 bisa didapat dari 
+```
+/ip address print
+Flags: X - disabled, I - invalid, D - dynamic 
+ #   ADDRESS            NETWORK         INTERFACE                                                               
+ 0   192.168.1.1/24     192.168.1.0     ether2                                                                 
+ 1 D 192.168.122.178/24 192.168.122.0   ether1
+```
+ether2 berada di nomor 0
+
+kemudian ubah ether2 ke bridge1 kemudian ctrl+o
 
 jika ingin menambahkan IP baru bisa dengan command berikut
 
