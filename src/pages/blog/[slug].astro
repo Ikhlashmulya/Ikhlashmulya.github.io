@@ -6,8 +6,8 @@ import BaseLayout from "../../layouts/baseLayout.astro";
 
 export const getStaticPaths = (async () => {
   const posts = (await Astro.glob<Frontmatter>(
-    "../../content/blog/**/*.md"
-  )) as MDXInstance<Frontmatter>[];
+    "../../content/blog/**/*.md",
+  )) as unknown as MDXInstance<Frontmatter>[];
 
   return posts.map((post) => ({
     params: {
